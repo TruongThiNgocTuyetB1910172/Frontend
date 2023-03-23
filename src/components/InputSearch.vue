@@ -4,9 +4,9 @@ export default {
     modelValue: { type: String, default: "" },
   },
   emits: ["submit", "update:modelValue"],
-  method: {
+  methods: {
     updateModelValue(e) {
-      this.$emit("update:modelValue", e.targer.value);
+      this.$emit("update:modelValue", e.target.value);
     },
     submit() {
       this.$emit("submit");
@@ -14,20 +14,23 @@ export default {
   },
 };
 </script>
+
 <template>
-  <div class="input-group">
+  
+    <div class="input-group" >
     <input
       type="text"
       class="form-control"
-      placeholder="Nhap thong tin can tim"
+      placeholder="Nhập thông tin cần tìm"
       :value="modelValue"
       @input="updateModelValue"
       @keyup.enter="submit"
     />
     <div class="input-group-append">
       <button class="btn btn-outline-secondary" type="button" @click="submit">
-        <i class="fas fa-search"></i> Tim kiem
+        <i class="fas fa-heart"></i> Tìm kiếm
       </button>
     </div>
   </div>
+  
 </template>
