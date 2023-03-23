@@ -14,6 +14,7 @@
       <label for="email">E-mail</label>
       <Field
         name="email"
+        
         type="email"
         class="form-control"
         v-model="contactLocal.email"
